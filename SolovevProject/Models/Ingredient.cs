@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SolovevProject.Models
 {
-	public class Ingredients
+	public class Ingredient
 	{
 		//Id игрединета
 		public int ingredientId { get; set; }
