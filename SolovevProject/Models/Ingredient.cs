@@ -3,7 +3,7 @@
 	public class Ingredient
 	{
 		//Id игрединета
-		public int ingredientId { get; set; }
+		public int IngredientId { get; set; }
 		//наименование
 		public string Name { get; set; }
 		//описание

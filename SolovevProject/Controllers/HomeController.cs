@@ -9,11 +9,11 @@ namespace SolovevProject.Controllers
 {
 	public class HomeController : Controller
 	{
-		DonerShopContext db = new DonerShopContext();
+		readonly DonerShopContext _db = new DonerShopContext();
 
 		public ActionResult Index()
 		{
-			IEnumerable<Doner> doners = db.Doners;
+			IEnumerable<Doner> doners = _db.Doners;
 			ViewBag.Doners = doners;
 
 			return View();
@@ -23,15 +23,15 @@ namespace SolovevProject.Controllers
 		public ActionResult Buy(int id)
 		{
 			ViewBag.Id = id;
-			ViewBag.Name = db.Doners.FirstOrDefault(x => x.Id == id).Name;
+			ViewBag.Name = _db.Doners.FirstOrDefault(x => x.Id == id).Name;
 			return View();
 		}
 		[HttpPost]
 		public string Buy(Purchase purchase)
 		{
 			purchase.Date = DateTime.Now;
-			db.Purchases.Add(purchase);
-			db.SaveChanges();
+			_db.Purchases.Add(purchase);
+			_db.SaveChanges();
 			return "Спасибо, за покупку! Заходите ещё!";
 		}
 
@@ -39,7 +39,7 @@ namespace SolovevProject.Controllers
 		public ActionResult Contains(int id)
 		{
 			ViewBag.Id = id;
-			//ViewBag.Ingredients=String.Join()
+			ViewBag.Ingredients = _db.Doners.FirstOrDefault(x => x.Id == id).StructToString();
 			return View();
 		}
 		

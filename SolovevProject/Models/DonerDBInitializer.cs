@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SolovevProject.Models
 {
-	public class DonerDBInitializer:DropCreateDatabaseAlways<DonerShopContext>
+	public class DonerDbInitializer:DropCreateDatabaseAlways<DonerShopContext>
 	{
 		protected override void Seed(DonerShopContext db)
 		{

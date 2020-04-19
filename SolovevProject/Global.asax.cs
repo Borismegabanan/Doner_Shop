@@ -14,7 +14,7 @@ namespace SolovevProject
 	{
 		protected void Application_Start()
 		{
-			Database.SetInitializer(new DonerDBInitializer());
+			Database.SetInitializer(new DonerDbInitializer());
 			AreaRegistration.RegisterAllAreas();
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
