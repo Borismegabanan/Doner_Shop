@@ -31,17 +31,20 @@
 
                 @foreach (var d in ViewBag.Doners)
                 {
-                    <tr>
-                        <td>
-                            <p>@d.Name</p>
-                        </td>
-                        <td>
-                            <p>@d.Price</p>
-                        </td>
-                        <td>
-                            <p><a href="/Home/Buy/@d.Id"></a>Купить</p>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <p>@d.Name</p>
+                </td>
+                <td>
+                    <p>@d.Price</p>
+                </td>
+                <td>
+                    <p><a href="/Home/Contains/@d.Id">Узнать ингредиенты</a></p>
+                </td>
+                <td>
+                    <p><a href="/Home/Buy/@d.Id">Купить</a></p>
+                </td>
+            </tr>
                 }
             </table>
         </div>
