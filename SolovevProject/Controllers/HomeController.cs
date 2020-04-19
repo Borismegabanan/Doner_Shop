@@ -23,17 +23,25 @@ namespace SolovevProject.Controllers
 		public ActionResult Buy(int id)
 		{
 			ViewBag.Id = id;
+			ViewBag.Name = db.Doners.FirstOrDefault(x => x.Id == id).Name;
 			return View();
 		}
 		[HttpPost]
 		public string Buy(Purchase purchase)
 		{
 			purchase.Date = DateTime.Now;
-			// добавляем информацию о покупке в базу данных
 			db.Purchases.Add(purchase);
-			// сохраняем в бд все изменения
 			db.SaveChanges();
 			return "Спасибо, за покупку! Заходите ещё!";
 		}
+
+		[HttpGet]
+		public ActionResult Contains(int id)
+		{
+			ViewBag.Id = id;
+			//ViewBag.Ingredients=String.Join()
+			return View();
+		}
+		
 	}
 }
