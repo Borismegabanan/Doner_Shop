@@ -2,4 +2,22 @@
     margin: 0;
     padding: 0;
     background-image: url('Doner 2.png');
+   
+}
+.parent {
+    margin: 10%;
+    background: #fd0; 
+    padding: 1px; 
+}
+
+.child {
+    border: 3px solid #666;
+    padding: 10px; 
+    margin: 5px; 
+}
+h3 {
+    text-align: center
+}
+td {
+    padding-right: 20px
 }
