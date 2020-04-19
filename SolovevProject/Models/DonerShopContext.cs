@@ -10,6 +10,7 @@ namespace SolovevProject.Models
 	{
 		public DbSet<Ingredient> Ingredients { get; set; }
 		public DbSet<Doner> Doners { get; set; }
+		public DbSet<Purchase> Purchases { get; set; }
 
 	}
 }

@@ -135,6 +135,7 @@
     <Compile Include="Models\DonerDBInitializer.cs" />
     <Compile Include="Models\DonerShopContext.cs" />
     <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
