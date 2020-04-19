@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     background-image: url('Doner 2.png');
-   
 }
+
 .parent {
     margin: 10%;
-    background: #fd0; 
-    padding: 1px; 
+    background: wheat;
+    padding: 1px;
+    background-image: url('Doner 1.png');
+    background-position-x: 400px;
+    background-repeat: no-repeat;
 }
 
 .child {
