@@ -11,5 +11,10 @@ namespace SolovevProject.Models
 		public string Name { get; set; }
 		public int Price { get; set; }
 		public IEnumerable<Ingredient> Structure { get; set; }
+
+		public string StructToString()
+		{
+			return string.Join(",", Structure.Select(x => x.Name));
+		}
 	}
 }
